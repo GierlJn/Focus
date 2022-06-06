@@ -7,10 +7,12 @@
 
 import CoreData
 
-struct PersistenceController {
-    static let shared = PersistenceController()
+public struct PersistenceController {
+    public static let shared = PersistenceController()
 
-    static var preview: PersistenceController = {
+    
+    
+    public static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         for _ in 0..<10 {
@@ -28,10 +30,15 @@ struct PersistenceController {
         return result
     }()
 
-    let container: NSPersistentContainer
+    public let container: NSPersistentContainer
 
+    // Create a subclass of NSPersistentStore Coordinator
+
+    
     init(inMemory: Bool = false) {
-        container = NSPersistentContainer(name: "Focus")
+        let modelURL = Bundle.module.url(forResource:"Model", withExtension: "momd")!
+        let model = NSManagedObjectModel(contentsOf: modelURL)!
+        container = NSPersistentContainer(name:"Model",managedObjectModel:model)
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }

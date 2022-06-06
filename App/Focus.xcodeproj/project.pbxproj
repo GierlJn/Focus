@@ -7,27 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B98AC7A3284E09DD001C947F /* Focus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B98AC790284E09DC001C947F /* Focus.xcdatamodeld */; };
-		B98AC7A4284E09DD001C947F /* Focus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B98AC790284E09DC001C947F /* Focus.xcdatamodeld */; };
 		B98AC7A5284E09DD001C947F /* FocusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AC792284E09DC001C947F /* FocusApp.swift */; };
 		B98AC7A6284E09DD001C947F /* FocusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AC792284E09DC001C947F /* FocusApp.swift */; };
-		B98AC7A7284E09DD001C947F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AC793284E09DC001C947F /* ContentView.swift */; };
-		B98AC7A8284E09DD001C947F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AC793284E09DC001C947F /* ContentView.swift */; };
-		B98AC7A9284E09DD001C947F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AC794284E09DC001C947F /* Persistence.swift */; };
-		B98AC7AA284E09DD001C947F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AC794284E09DC001C947F /* Persistence.swift */; };
 		B98AC7AB284E09DD001C947F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B98AC795284E09DD001C947F /* Assets.xcassets */; };
 		B98AC7AC284E09DD001C947F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B98AC795284E09DD001C947F /* Assets.xcassets */; };
+		B98AC7BB284E21C7001C947F /* AppEntry in Frameworks */ = {isa = PBXBuildFile; productRef = B98AC7BA284E21C7001C947F /* AppEntry */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B98AC791284E09DC001C947F /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		B98AC792284E09DC001C947F /* FocusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusApp.swift; sourceTree = "<group>"; };
-		B98AC793284E09DC001C947F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		B98AC794284E09DC001C947F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		B98AC795284E09DD001C947F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B98AC79A284E09DD001C947F /* Focus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Focus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98AC7A0284E09DD001C947F /* Focus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Focus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98AC7A2284E09DD001C947F /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		B98AC7B8284E0CBC001C947F /* Focus */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Focus; path = ..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B98AC7BB284E21C7001C947F /* AppEntry in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,9 +45,11 @@
 		B98AC78A284E09DB001C947F = {
 			isa = PBXGroup;
 			children = (
+				B98AC7B8284E0CBC001C947F /* Focus */,
 				B98AC78F284E09DC001C947F /* Shared */,
 				B98AC7A1284E09DD001C947F /* macOS */,
 				B98AC79B284E09DD001C947F /* Products */,
+				B98AC7B9284E21C7001C947F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,10 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				B98AC792284E09DC001C947F /* FocusApp.swift */,
-				B98AC793284E09DC001C947F /* ContentView.swift */,
-				B98AC794284E09DC001C947F /* Persistence.swift */,
 				B98AC795284E09DD001C947F /* Assets.xcassets */,
-				B98AC790284E09DC001C947F /* Focus.xcdatamodeld */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -86,6 +79,13 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
+		B98AC7B9284E21C7001C947F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,6 +102,8 @@
 			dependencies = (
 			);
 			name = "Focus (iOS)";
+			packageProductDependencies = (
+			);
 			productName = "Focus (iOS)";
 			productReference = B98AC79A284E09DD001C947F /* Focus.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +121,9 @@
 			dependencies = (
 			);
 			name = "Focus (macOS)";
+			packageProductDependencies = (
+				B98AC7BA284E21C7001C947F /* AppEntry */,
+			);
 			productName = "Focus (macOS)";
 			productReference = B98AC7A0284E09DD001C947F /* Focus.app */;
 			productType = "com.apple.product-type.application";
@@ -150,6 +155,8 @@
 				Base,
 			);
 			mainGroup = B98AC78A284E09DB001C947F;
+			packageReferences = (
+			);
 			productRefGroup = B98AC79B284E09DD001C947F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -185,9 +192,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B98AC7A5284E09DD001C947F /* FocusApp.swift in Sources */,
-				B98AC7A9284E09DD001C947F /* Persistence.swift in Sources */,
-				B98AC7A3284E09DD001C947F /* Focus.xcdatamodeld in Sources */,
-				B98AC7A7284E09DD001C947F /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,9 +200,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B98AC7A6284E09DD001C947F /* FocusApp.swift in Sources */,
-				B98AC7AA284E09DD001C947F /* Persistence.swift in Sources */,
-				B98AC7A4284E09DD001C947F /* Focus.xcdatamodeld in Sources */,
-				B98AC7A8284E09DD001C947F /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +256,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -307,6 +310,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -329,12 +334,11 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gierljn.Focus;
 				PRODUCT_NAME = Focus;
 				SDKROOT = iphoneos;
@@ -359,12 +363,11 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gierljn.Focus;
 				PRODUCT_NAME = Focus;
 				SDKROOT = iphoneos;
@@ -381,6 +384,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -393,8 +397,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gierljn.Focus;
 				PRODUCT_NAME = Focus;
 				SDKROOT = macosx;
@@ -409,6 +412,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -421,8 +425,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gierljn.Focus;
 				PRODUCT_NAME = Focus;
 				SDKROOT = macosx;
@@ -463,18 +466,12 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCVersionGroup section */
-		B98AC790284E09DC001C947F /* Focus.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				B98AC791284E09DC001C947F /* Shared.xcdatamodel */,
-			);
-			currentVersion = B98AC791284E09DC001C947F /* Shared.xcdatamodel */;
-			path = Focus.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+/* Begin XCSwiftPackageProductDependency section */
+		B98AC7BA284E21C7001C947F /* AppEntry */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppEntry;
 		};
-/* End XCVersionGroup section */
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B98AC78B284E09DB001C947F /* Project object */;
 }

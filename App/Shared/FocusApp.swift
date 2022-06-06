@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import AppEntry
+import Model
 
 @main
 struct FocusApp: App {
@@ -13,6 +15,7 @@ struct FocusApp: App {
 
     var body: some Scene {
         WindowGroup {
+            Text("")
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
